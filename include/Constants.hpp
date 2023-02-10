@@ -1,0 +1,10 @@
+#pragma once
+#include <string>
+
+const std::string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+const std::string ROTOR_I =   "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
+const std::string ROTOR_II =  "AJDKSIRUXBLHWTMCQGZNPYFVOE";
+const std::string ROTOR_III = "BDFHJLCPRTXVZNYEIWGAKMUSQO";
+
+const std::string REFLECTOR_A = "EJMZALYXVBWFCRQUONTSPIKHGD";
