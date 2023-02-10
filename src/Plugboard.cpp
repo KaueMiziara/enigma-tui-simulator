@@ -25,6 +25,4 @@ void Plugboard::swapLetters(std::vector<std::string> pairs) {
 void Plugboard::getSwapped() {
     std::vector<std::string> pairs {"AB", "CD", "EF"};
     this->swapLetters(pairs);
-
-    // return this->componentWiring;
 }

@@ -1,5 +1,6 @@
 #include <string>
 
+#include "../include/Constants.h"
 #include "../include/Rotor.h"
 
 Rotor::Rotor(std::string wiring, char notch) {
@@ -7,6 +8,11 @@ Rotor::Rotor(std::string wiring, char notch) {
     this->rotorNotch = notch;
 }
 
-std::string Rotor::getWiring() {
-    return this->componentWiring;
+char Rotor::passForward(char letter, EnigmaComponent *nextComponent) {
+    size_t index = this->componentWiring.find(letter, 0);
+
+    index = ALPHABET.find(this->componentWiring[index]);
+    letter = nextComponent->getWiring()[index];
+
+    return letter;
 }
