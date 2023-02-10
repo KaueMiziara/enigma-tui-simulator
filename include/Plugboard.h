@@ -4,8 +4,9 @@
 #include <string>
 
 #include "Constants.h"
+#include "EnigmaComponent.h"
 
-class Plugboard {
+class Plugboard : public EnigmaComponent {
 private:
     std::string swapped = ALPHABET;
 
