@@ -6,5 +6,7 @@
 
 class Keyboard : public EnigmaComponent {
 public:
+    Keyboard();
+
     char takeInput();
 };

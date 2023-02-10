@@ -6,6 +6,7 @@ set(SOURCES
     src/main.cpp
     src/Keyboard.cpp
     src/Plugboard.cpp
+    src/Rotor.cpp
     src/EnigmaComponent.cpp
     src/Enigma.cpp)
 
