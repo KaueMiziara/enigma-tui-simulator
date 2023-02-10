@@ -13,19 +13,11 @@
  */
 
 #include <iostream>
-#include <string>
 
-#include "../include/Constants.h"
-#include "../include/Keyboard.h"
+#include "../include/Enigma.h"
 
 int main(int argc, char **argv) {
-    Keyboard keyboard;
+    Enigma enigma;
 
-    char input = keyboard.takeInput();
-
-    size_t index = keyboard.passForward(ALPHABET, input);
-    char letter = keyboard.passBackward(ALPHABET, index);
-
-    std::cout << index << std::endl;
-    std::cout << letter << std::endl;
+    std::cout << enigma.encipher() << std::endl;
 }
