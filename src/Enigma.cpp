@@ -28,13 +28,21 @@ char Enigma::encipher() {
     letter = rotorLeft.passForward(letter, &reflector);
     letter = reflector.passForward(letter, &reflector);
 
+    letter = reflector.passBackward(letter, &rotorLeft);
+
+    letter = rotorLeft.passBackward(letter, &rotorMiddle);
+    letter = rotorMiddle.passBackward(letter, &rotorRight);
+
+    letter = rotorRight.passBackward(letter, &plugboard);
+
+    letter = plugboard.passBackward(letter, &keyboard);
 
     // TODO:
     // take input and pass to plugboard +
     // pass letter from plugboard into rotors +
     // pass from rotors to the reflector +
-    // reflector -> rotors
-    // rotors -> plugboard == output
+    // reflector -> rotors +
+    // rotors -> plugboard == output +
 
     return letter;
 }
