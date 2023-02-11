@@ -20,6 +20,7 @@ char Enigma::encipher() {
 
     char letter = keyboard.takeInput();
 
+    letter = keyboard.passForward(letter, &plugboard);
     letter = plugboard.passForward(letter, &rotorRight);
 
     letter = rotorRight.passForward(letter, &rotorMiddle);
@@ -38,11 +39,9 @@ char Enigma::encipher() {
     letter = plugboard.passBackward(letter, &keyboard);
 
     // TODO:
-    // take input and pass to plugboard +
-    // pass letter from plugboard into rotors +
-    // pass from rotors to the reflector +
-    // reflector -> rotors +
-    // rotors -> plugboard == output +
+    // change method so it can take a string
+    // shift first rotor after each letter pressed
+    // shift other rotors when notch pressed
 
     return letter;
 }

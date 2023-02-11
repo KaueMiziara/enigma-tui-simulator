@@ -10,6 +10,4 @@ private:
 
 public:
     Rotor(std::string wiring, char notch);
-
-    char passForward(char letter, EnigmaComponent *nextComponent) override;
 };

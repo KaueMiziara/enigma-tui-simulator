@@ -3,6 +3,8 @@
 
 char EnigmaComponent::passForward(char letter, EnigmaComponent *nextComponent) {
     size_t index = this->componentWiring.find(letter, 0);
+
+    index = ALPHABET.find(this->componentWiring[index]);
     letter = nextComponent->getWiring()[index];
 
     return letter;
