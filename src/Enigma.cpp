@@ -6,6 +6,7 @@
 #include "../include/Keyboard.h"
 #include "../include/Plugboard.h"
 #include "../include/Rotor.h"
+#include "../include/Reflector.h"
 
 char Enigma::encipher() {
     Keyboard keyboard;
@@ -15,6 +16,8 @@ char Enigma::encipher() {
     Rotor rotorMiddle = Rotor(ROTOR_II, 'E');
     Rotor rotorRight = Rotor(ROTOR_III, 'V');
 
+    Reflector reflector = Reflector(REFLECTOR_A);
+
     char letter = keyboard.takeInput();
 
     letter = plugboard.passForward(letter, &rotorRight);
@@ -22,11 +25,14 @@ char Enigma::encipher() {
     letter = rotorRight.passForward(letter, &rotorMiddle);
     letter = rotorMiddle.passForward(letter, &rotorLeft);
 
+    letter = rotorLeft.passForward(letter, &reflector);
+    letter = reflector.passForward(letter, &reflector);
+
 
     // TODO:
     // take input and pass to plugboard +
     // pass letter from plugboard into rotors +
-    // pass from rotors to the reflector
+    // pass from rotors to the reflector +
     // reflector -> rotors
     // rotors -> plugboard == output
 
