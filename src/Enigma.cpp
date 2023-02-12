@@ -1,3 +1,4 @@
+#include <cstddef>
 #include <string>
 #include <iostream>
 
@@ -35,7 +36,7 @@ std::string Enigma::encipherText() {
     text += keyboard.takeInput();
 
     for (char &letter : text) {
-        this->rotateRotors(letter);
+        this->rotateRotors();
         
         letter = encipherLetter(letter);
     }
@@ -43,6 +44,12 @@ std::string Enigma::encipherText() {
     return text;
 }
 
-void Enigma::rotateRotors(char letter) {
+void Enigma::rotateRotors() {
+    if (rotorMiddle.getWiring()[0] == rotorMiddle.getNotch())
+        rotorLeft.rotate();
+
+    if (rotorRight.getWiring()[0] == rotorRight.getNotch())
+        rotorMiddle.rotate();
+
     rotorRight.rotate();
 }

@@ -21,7 +21,7 @@ private:
 
     char encipherLetter(char letter);
 
-    void rotateRotors(char letter);
+    void rotateRotors();
 
 public:
     std::string encipherText();
