@@ -4,7 +4,7 @@
 #include "../include/Enigma.h"
 
 // TODO:
-// shift first rotor after each letter pressed
+// shift first rotor after each letter pressed +
 // shift other rotors when passed through notch
 
 char Enigma::encipherLetter(char letter) {
@@ -35,8 +35,14 @@ std::string Enigma::encipherText() {
     text += keyboard.takeInput();
 
     for (char &letter : text) {
+        this->rotateRotors(letter);
+        
         letter = encipherLetter(letter);
     }
 
     return text;
+}
+
+void Enigma::rotateRotors(char letter) {
+    rotorRight.rotate();
 }

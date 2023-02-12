@@ -10,4 +10,8 @@ private:
 
 public:
     Rotor(std::string wiring, char notch);
+
+    char getNotch();
+
+    void rotate();
 };

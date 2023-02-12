@@ -6,3 +6,12 @@ Rotor::Rotor(std::string wiring, char notch) {
     this->componentWiring = wiring;
     this->rotorNotch = notch;
 }
+
+void Rotor::rotate() {
+    this->componentWiring = componentWiring.substr(1, 25) +
+                            componentWiring.substr(0, 1);
+}
+
+char Rotor::getNotch() {
+    return this->rotorNotch;
+}
