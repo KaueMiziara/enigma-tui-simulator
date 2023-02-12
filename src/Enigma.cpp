@@ -1,4 +1,3 @@
-#include <cstddef>
 #include <string>
 #include <iostream>
 
@@ -6,6 +5,8 @@
 
 // TODO:
 // ring settings
+// input checker
+// error handling
 
 char Enigma::encipherLetter(char letter) {
     letter = keyboard.passForward(letter, &plugboard);
@@ -35,9 +36,11 @@ std::string Enigma::encipherText() {
     text += keyboard.takeInput();
 
     for (char &letter : text) {
-        this->rotateRotors();
-        
-        letter = encipherLetter(letter);
+        if (isalpha(letter)) {
+            this->rotateRotors();
+            
+            letter = encipherLetter(letter);
+        }
     }
 
     return text;

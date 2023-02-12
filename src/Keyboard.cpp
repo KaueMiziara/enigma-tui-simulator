@@ -8,10 +8,10 @@ Keyboard::Keyboard() {
 }
 
 std::string Keyboard::takeInput() {
-    std::string input;
-    std::cout << "Insert a word: ";
+    std::string input = "";
+    std::cout << "Insert a text: ";
 
-    std::cin >> input;
+    std::getline(std::cin, input);
     for (char &letter : input) {
         letter = toupper(letter);
     }
