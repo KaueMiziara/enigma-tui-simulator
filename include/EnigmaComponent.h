@@ -2,9 +2,12 @@
 
 #include <string>
 
+#include "../include/Constants.h"
+
 class EnigmaComponent {
 protected:
     std::string componentWiring;
+    std::string componentAlphabet = ALPHABET;
 
 public:
     virtual char passForward(char letter, EnigmaComponent *nextComponent);

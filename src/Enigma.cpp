@@ -5,8 +5,7 @@
 #include "../include/Enigma.h"
 
 // TODO:
-// shift first rotor after each letter pressed +
-// shift other rotors when passed through notch
+// ring settings
 
 char Enigma::encipherLetter(char letter) {
     letter = keyboard.passForward(letter, &plugboard);
