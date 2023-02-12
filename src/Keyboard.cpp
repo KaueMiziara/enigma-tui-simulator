@@ -7,12 +7,14 @@ Keyboard::Keyboard() {
     this->componentWiring = ALPHABET;
 }
 
-char Keyboard::takeInput() {
-    char input;
-    std::cout << "Insert a letter: ";
+std::string Keyboard::takeInput() {
+    std::string input;
+    std::cout << "Insert a word: ";
 
     std::cin >> input;
-    input = toupper(input);
+    for (char &letter : input) {
+        letter = toupper(letter);
+    }
 
     return input;
 }

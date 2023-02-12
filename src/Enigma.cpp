@@ -2,24 +2,12 @@
 #include <iostream>
 
 #include "../include/Enigma.h"
-#include "../include/Constants.h"
-#include "../include/Keyboard.h"
-#include "../include/Plugboard.h"
-#include "../include/Rotor.h"
-#include "../include/Reflector.h"
 
-char Enigma::encipher() {
-    Keyboard keyboard;
-    Plugboard plugboard;
+// TODO:
+// shift first rotor after each letter pressed
+// shift other rotors when passed through notch
 
-    Rotor rotorLeft = Rotor(ROTOR_I, 'Q');
-    Rotor rotorMiddle = Rotor(ROTOR_II, 'E');
-    Rotor rotorRight = Rotor(ROTOR_III, 'V');
-
-    Reflector reflector = Reflector(REFLECTOR_A);
-
-    char letter = keyboard.takeInput();
-
+char Enigma::encipherLetter(char letter) {
     letter = keyboard.passForward(letter, &plugboard);
     letter = plugboard.passForward(letter, &rotorRight);
 
@@ -38,10 +26,17 @@ char Enigma::encipher() {
 
     letter = plugboard.passBackward(letter, &keyboard);
 
-    // TODO:
-    // change method so it can take a string
-    // shift first rotor after each letter pressed
-    // shift other rotors when notch pressed
-
     return letter;
+}
+
+std::string Enigma::encipherText() {
+    std::string text = "";
+
+    text += keyboard.takeInput();
+
+    for (char &letter : text) {
+        letter = encipherLetter(letter);
+    }
+
+    return text;
 }

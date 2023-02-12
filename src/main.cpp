@@ -19,5 +19,5 @@
 int main(int argc, char **argv) {
     Enigma enigma;
 
-    std::cout << enigma.encipher() << std::endl;
+    std::cout << enigma.encipherText() << std::endl;
 }
