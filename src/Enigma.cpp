@@ -4,9 +4,10 @@
 #include "../include/Enigma.h"
 
 // TODO:
-// ring settings +
-// input checker
-// error handling
+// menu to choose settings
+// add more rotors and reflectors
+// add a way to change the plugboard from user input
+// a decent README
 
 char Enigma::encipherLetter(char letter) {
     letter = keyboard.passForward(letter, &plugboard);
@@ -54,4 +55,20 @@ void Enigma::rotateRotors() {
         rotorMiddle.rotate();
 
     rotorRight.rotate();
+}
+
+Enigma::Enigma(Keyboard *keyboard, Plugboard *plugboard,
+Rotor *rotorLeft,
+Rotor *rotorMiddle,
+Rotor *rotorRight,
+Reflector *reflector
+) {
+    this->keyboard = *keyboard;
+    this->plugboard = *plugboard;
+
+    this->rotorLeft = *rotorLeft;
+    this->rotorMiddle = *rotorMiddle;
+    this->rotorRight = *rotorRight;
+
+    this->reflector = *reflector;
 }

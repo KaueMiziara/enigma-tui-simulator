@@ -6,5 +6,7 @@
 
 class Reflector : public EnigmaComponent {
 public:
+    Reflector();
+    
     Reflector(std::string wiring);
 };

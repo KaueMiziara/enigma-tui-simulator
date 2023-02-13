@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "../include/Constants.h"
+// #include "../include/Constants.h"
 #include "../include/Keyboard.h"
 #include "../include/Plugboard.h"
 #include "../include/Rotor.h"
@@ -13,16 +13,24 @@ private:
     Keyboard keyboard;
     Plugboard plugboard;
 
-    Rotor rotorLeft = Rotor(ROTOR_I, 'Q', 'A');
-    Rotor rotorMiddle = Rotor(ROTOR_II, 'E', 'A');
-    Rotor rotorRight = Rotor(ROTOR_III, 'V', 'A');
+    Rotor rotorLeft;
+    Rotor rotorMiddle;
+    Rotor rotorRight;
 
-    Reflector reflector = Reflector(REFLECTOR_A);
+    Reflector reflector;
 
     char encipherLetter(char letter);
 
     void rotateRotors();
 
 public:
+    Enigma(
+        Keyboard *keyboard, Plugboard *plugboard,
+        Rotor *rotorLeft,
+        Rotor *rotorMiddle,
+        Rotor *rotorRight,
+        Reflector *reflector
+        );
+
     std::string encipherText();
 };

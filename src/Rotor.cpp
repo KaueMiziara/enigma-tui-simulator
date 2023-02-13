@@ -1,6 +1,12 @@
 #include <string>
 
+#include "../include/Constants.h"
 #include "../include/Rotor.h"
+
+Rotor::Rotor() {
+    this->componentWiring = ALPHABET;
+    this->rotorNotch = 'A';
+}
 
 Rotor::Rotor(std::string wiring, char notch, char ringPosition) {
     this->componentWiring = wiring;

@@ -11,6 +11,8 @@ private:
     void setRing(char firstLetter);
 
 public:
+    Rotor();
+    
     Rotor(std::string wiring, char notch, char ringPosition);
 
     char getNotch();
