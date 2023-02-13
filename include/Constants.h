@@ -1,11 +1,17 @@
 #pragma once
+
 #include <string>
+#include <unordered_map>
 
 const std::string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-const std::string ROTOR_I =   "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
-const std::string ROTOR_II =  "AJDKSIRUXBLHWTMCQGZNPYFVOE";
-const std::string ROTOR_III = "BDFHJLCPRTXVZNYEIWGAKMUSQO";
+const std::unordered_map<std::string, std::string> ROTORS {
+    {"I",   "EKMFLGDQVZNTOWYHXUSPAIBRCJ"},
+    {"II",  "AJDKSIRUXBLHWTMCQGZNPYFVOE"},
+    {"III", "BDFHJLCPRTXVZNYEIWGAKMUSQO"}
+};
 
-const std::string REFLECTOR_A = "EJMZALYXVBWFCRQUONTSPIKHGD";
-const std::string REFLECTOR_B = "YRUHQSLDPXNGOKMIEBFZCWVJAT";
+const std::unordered_map<std::string, std::string> REFLECTORS = {
+    {"A", "EJMZALYXVBWFCRQUONTSPIKHGD"},
+    {"B", "YRUHQSLDPXNGOKMIEBFZCWVJAT"}
+};
