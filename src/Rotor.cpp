@@ -2,9 +2,16 @@
 
 #include "../include/Rotor.h"
 
-Rotor::Rotor(std::string wiring, char notch) {
+Rotor::Rotor(std::string wiring, char notch, char ringPosition) {
     this->componentWiring = wiring;
     this->rotorNotch = notch;
+    this->setRing(ringPosition);
+}
+
+void Rotor::setRing(char ringPosition) {
+    while (this->componentAlphabet[0] != ringPosition) {
+        this->rotate();
+    }
 }
 
 void Rotor::rotate() {

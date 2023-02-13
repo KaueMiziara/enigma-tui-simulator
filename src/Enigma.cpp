@@ -4,7 +4,7 @@
 #include "../include/Enigma.h"
 
 // TODO:
-// ring settings
+// ring settings +
 // input checker
 // error handling
 

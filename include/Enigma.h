@@ -13,9 +13,9 @@ private:
     Keyboard keyboard;
     Plugboard plugboard;
 
-    Rotor rotorLeft = Rotor(ROTOR_I, 'Q');
-    Rotor rotorMiddle = Rotor(ROTOR_II, 'E');
-    Rotor rotorRight = Rotor(ROTOR_III, 'V');
+    Rotor rotorLeft = Rotor(ROTOR_I, 'Q', 'A');
+    Rotor rotorMiddle = Rotor(ROTOR_II, 'E', 'A');
+    Rotor rotorRight = Rotor(ROTOR_III, 'V', 'A');
 
     Reflector reflector = Reflector(REFLECTOR_A);
 
