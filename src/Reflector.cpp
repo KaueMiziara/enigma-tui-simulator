@@ -11,6 +11,8 @@ Reflector::Reflector(char ringPosition) {
     std::cout << std::endl;
 
     std::cout << "What reflector should be used?" << std::endl;
+    std::cout << "Reflector list: 'A', 'B', 'C', 'Beta', 'Gamma', default: 'A'" << std::endl;
+
     this->componentWiring = REFLECTORS.at(this->wiringInput());
 
     this->setRing(ringPosition);
