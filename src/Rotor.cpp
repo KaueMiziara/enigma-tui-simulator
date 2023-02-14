@@ -40,8 +40,8 @@ std::string Rotor::wiringInput() {
 
     std::cin.ignore();
 
-    if (ROTORS.find(rotor) != ROTORS.end()) {
-        for (char &c : rotor) {c = toupper(c);}
-        return rotor;
-    } else return "I";
+    for (char &c : rotor) {c = toupper(c);}
+
+    if (ROTORS.find(rotor) != ROTORS.end()) return rotor;
+    else return "I";
 }
