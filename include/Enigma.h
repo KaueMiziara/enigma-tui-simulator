@@ -1,8 +1,5 @@
 #pragma once
 
-#include <string>
-
-// #include "../include/Constants.h"
 #include "../include/Keyboard.h"
 #include "../include/Plugboard.h"
 #include "../include/Rotor.h"
@@ -33,4 +30,6 @@ public:
         );
 
     std::string encipherText();
+    
+    void printSettings();
 };

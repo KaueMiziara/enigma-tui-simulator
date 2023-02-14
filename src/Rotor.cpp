@@ -1,4 +1,4 @@
-#include <string>
+#include <iostream>
 
 #include "../include/Constants.h"
 #include "../include/Rotor.h"
@@ -8,8 +8,10 @@ Rotor::Rotor() {
     this->rotorNotch = 'A';
 }
 
-Rotor::Rotor(std::string wiring, char notch, char ringPosition) {
-    this->componentWiring = wiring;
+Rotor::Rotor(char notch, char ringPosition, int n) {
+    std::cout << "(" << n << "/3) What rotor should be used?" << std::endl;
+
+    this->componentWiring = ROTORS.at(this->wiringInput());
     this->rotorNotch = notch;
     this->setRing(ringPosition);
 }
@@ -30,4 +32,16 @@ void Rotor::rotate() {
 
 char Rotor::getNotch() {
     return this->rotorNotch;
+}
+
+std::string Rotor::wiringInput() {
+    std::string rotor;
+    std::cin >> rotor;
+
+    std::cin.ignore();
+
+    if (ROTORS.find(rotor) != ROTORS.end()) {
+        for (char &c : rotor) {c = toupper(c);}
+        return rotor;
+    } else return "I";
 }

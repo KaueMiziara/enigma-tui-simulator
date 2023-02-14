@@ -1,11 +1,8 @@
-#include <string>
 #include <iostream>
 
 #include "../include/Enigma.h"
 
 // TODO:
-// menu to choose settings
-// add more rotors and reflectors
 // add a way to change the plugboard from user input
 // a decent README
 
@@ -71,4 +68,20 @@ Reflector *reflector
     this->rotorRight = *rotorRight;
 
     this->reflector = *reflector;
+}
+
+void Enigma::printSettings() {
+    std::cout << std::endl;
+    std::cout << "Leftmost rotor wiring: " << this->rotorLeft.getWiring()
+              << ", notch: " << this->rotorLeft.getNotch() << std::endl;
+
+    std::cout << "Middle rotor wiring: " << this->rotorMiddle.getWiring()
+              << ", notch: " << this->rotorMiddle.getNotch() << std::endl;
+
+    std::cout << "Rightmost rotor wiring: " << this->rotorRight.getWiring()
+              << ", notch: " << this->rotorRight.getNotch() << std::endl;
+    std::cout << std::endl;
+
+    std::cout << "Reflector wiring: " << this->reflector.getWiring() << std::endl;
+    std::cout << std::endl;
 }

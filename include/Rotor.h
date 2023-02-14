@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-
 #include "EnigmaComponent.h"
 
 class Rotor : public EnigmaComponent {
@@ -13,9 +11,11 @@ private:
 public:
     Rotor();
     
-    Rotor(std::string wiring, char notch, char ringPosition);
+    Rotor(char notch, char ringPosition, int n);
 
     char getNotch();
 
     void rotate();
+
+    std::string wiringInput();
 };

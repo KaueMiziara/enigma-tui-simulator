@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-
 #include "../include/Constants.h"
 
 class EnigmaComponent {

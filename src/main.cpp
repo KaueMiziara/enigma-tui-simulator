@@ -2,24 +2,22 @@
 
 #include "../include/Constants.h"
 #include "../include/Enigma.h"
-#include "../include/Keyboard.h"
-#include "../include/Plugboard.h"
-#include "../include/Rotor.h"
-#include "../include/Reflector.h"
 
 int main(int argc, char **argv) {
     Keyboard keyboard;
     Plugboard plugboard;
 
-    Rotor rotorLeft = Rotor(ROTORS.at("I"), 'Q', 'A');
-    Rotor rotorMiddle = Rotor(ROTORS.at("II"), 'E', 'A');
-    Rotor rotorRight = Rotor(ROTORS.at("III"), 'V', 'A');
+    Rotor rotorLeft =   Rotor('Q', 'A', 1);
+    Rotor rotorMiddle = Rotor('E', 'A', 2);
+    Rotor rotorRight =  Rotor('V', 'A', 3);
 
     Reflector reflector = Reflector(REFLECTORS.at("A"));
 
     Enigma enigma = Enigma(&keyboard, &plugboard,
         &rotorLeft, &rotorMiddle, &rotorRight,
         &reflector);
+
+    enigma.printSettings();
 
     std::cout << enigma.encipherText() << std::endl;
 }
