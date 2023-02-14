@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
     Rotor rotorMiddle = Rotor('E', 'A', 2);
     Rotor rotorRight =  Rotor('V', 'A', 3);
 
-    Reflector reflector = Reflector();
+    Reflector reflector = Reflector('A');
 
     Enigma enigma = Enigma(&keyboard, &plugboard,
         &rotorLeft, &rotorMiddle, &rotorRight,
