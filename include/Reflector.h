@@ -5,8 +5,12 @@
 #include "EnigmaComponent.h"
 
 class Reflector : public EnigmaComponent {
+private:
+    std::string wiringInput();
+
 public:
     Reflector();
     
-    Reflector(std::string wiring);
+    // Reflector();
+
 };

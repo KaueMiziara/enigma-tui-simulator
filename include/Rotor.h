@@ -8,6 +8,8 @@ private:
 
     void setRing(char firstLetter);
 
+    std::string wiringInput();
+
 public:
     Rotor();
     
@@ -16,6 +18,4 @@ public:
     char getNotch();
 
     void rotate();
-
-    std::string wiringInput();
 };

@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "../include/Constants.h"
 #include "../include/Enigma.h"
 
 int main(int argc, char **argv) {
@@ -11,7 +10,7 @@ int main(int argc, char **argv) {
     Rotor rotorMiddle = Rotor('E', 'A', 2);
     Rotor rotorRight =  Rotor('V', 'A', 3);
 
-    Reflector reflector = Reflector(REFLECTORS.at("A"));
+    Reflector reflector = Reflector();
 
     Enigma enigma = Enigma(&keyboard, &plugboard,
         &rotorLeft, &rotorMiddle, &rotorRight,

@@ -3,6 +3,7 @@
 #include "../include/Enigma.h"
 
 // TODO:
+// link rotors wiring to its notch
 // add a way to change the plugboard from user input
 // a decent README
 
