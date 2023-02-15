@@ -2,11 +2,6 @@
 
 #include "../include/Enigma.h"
 
-// TODO:
-// link rotors wiring to its notch
-// add a way to change the plugboard from user input
-// a decent README
-
 char Enigma::encipherLetter(char letter) {
     letter = keyboard.passForward(letter, &plugboard);
     letter = plugboard.passForward(letter, &rotorRight);

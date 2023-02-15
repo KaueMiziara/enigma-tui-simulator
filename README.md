@@ -1,6 +1,8 @@
 # Enigma Simulator (CLI)
-Encrypt messages using the Enigma machine (CLI version)
+Encrypt messages using the Enigma machine (CLI version)<br>
 
+> Both the code and this README section are currently WIP
+<br>
 
 ## How does the real Enigma work?
 The Enigma is a machine extensively used by Germany Armed Forces during World War II.<br>
@@ -12,8 +14,15 @@ It enciphers messages using an electromechanical mecanism that consists in:<br>
 - 26 lights that shows the enciphered letter.
 <br>
 
-### Keyboard and Plugboard
-<!-- TODO -->
+### Keyboard
+Similar to a typing machine keyboard.<br>
+After pressing a key, an electrical signal is passed to the plugboard, where the letter could be scrambled.<br>
+
+
+### Plugboard
+A board in the machine's front side, containing a socket for each alphabet letter, wired to the respective keyboard key.<br>
+Ten pair of letter are chosen to be plugged, swapping the letter if a signal is received, i.e. if 'A' and 'B' are connected in the plugboard and 'A' is pressed on the keyboard, the output would be 'B'.<br>
+
 
 ### Rotors and Reflector
 <!-- TODO -->
