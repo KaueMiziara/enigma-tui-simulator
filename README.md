@@ -2,9 +2,9 @@
 Encrypt messages using the Enigma machine (CLI version)<br>
 
 > Both the code and this README section are currently WIP
-<br>
 
-## How does the real Enigma work?
+
+## About the Enigma Machine
 The Enigma is a machine extensively used by Germany Armed Forces during World War II.<br>
 It enciphers messages using an electromechanical mecanism that consists in:<br>
 - 1 keyboard;
@@ -18,11 +18,9 @@ It enciphers messages using an electromechanical mecanism that consists in:<br>
 Similar to a typing machine keyboard.<br>
 After pressing a key, an electrical signal is passed to the plugboard, where the letter could be scrambled.<br>
 
-
 ### Plugboard
 A board in the machine's front side, containing a socket for each alphabet letter, wired to the respective keyboard key.<br>
 Ten pair of letter are chosen to be plugged, swapping the letter if a signal is received, i.e. if 'A' and 'B' are connected in the plugboard and 'A' is pressed on the keyboard, the output would be 'B'.<br>
-
 
 ### Rotors and Reflector
 <!-- TODO -->
@@ -36,7 +34,7 @@ Ten pair of letter are chosen to be plugged, swapping the letter if a signal is 
 <!-- 26!/(6!.10!.2^10) ways to choose the plugboard settings -->
 
 
-## How does this application works?
+## About this application
 <!-- TODO -->
 
 
@@ -59,7 +57,7 @@ cmake --build build
 ```
 The executable will be inside the 'build' folder.<br>
 
-### Running from the terminal and configuring the machine
+### Running and configuring the machine
 <!-- TODO -->
 ```bash
 cd build

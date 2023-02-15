@@ -13,7 +13,7 @@ private:
 public:
     Rotor();
     
-    Rotor(char notch, char ringPosition, int n);
+    Rotor(char ringPosition, int n);
 
     char getNotch();
 
