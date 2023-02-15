@@ -12,4 +12,5 @@ public:
     virtual char passBackward(char letter, EnigmaComponent *nextComponent);
 
     virtual std::string getWiring();
+    virtual std::string getAlphabet();
 };

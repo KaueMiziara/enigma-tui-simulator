@@ -41,10 +41,10 @@ std::string Enigma::encipherText() {
 }
 
 void Enigma::rotateRotors() {
-    if (rotorMiddle.getWiring()[0] == rotorMiddle.getNotch())
+    if (rotorMiddle.getAlphabet()[0] == rotorMiddle.getNotch())
         rotorLeft.rotate();
 
-    if (rotorRight.getWiring()[0] == rotorRight.getNotch())
+    if (rotorRight.getAlphabet()[0] == rotorRight.getNotch())
         rotorMiddle.rotate();
 
     rotorRight.rotate();

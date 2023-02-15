@@ -23,3 +23,7 @@ char EnigmaComponent::passBackward(char letter, EnigmaComponent *nextComponent) 
 std::string EnigmaComponent::getWiring() {
     return this->componentWiring;
 }
+
+std::string EnigmaComponent::getAlphabet() {
+    return this->componentAlphabet;
+}
