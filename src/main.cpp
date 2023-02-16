@@ -2,10 +2,6 @@
 
 #include "../include/Enigma.h"
 
-// TODO:
-// add a way to change the plugboard from user input
-// ^- plugboard file
-
 int main(int argc, char **argv) {
     Keyboard keyboard;
     Plugboard plugboard;

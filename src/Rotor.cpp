@@ -9,8 +9,8 @@ Rotor::Rotor() {
 }
 
 Rotor::Rotor(char ringPosition, int n) {
-    std::cout << "(" << n << "/3) What rotor should be used?" << std::endl;
-    std::cout << "Rotor list: 'I', 'II', 'III', 'IV', 'V', default: 'I'" << std::endl;
+    std::cout << "(" << n << "/3) What rotor should be used?\n";
+    std::cout << "Rotor list: 'I', 'II', 'III', 'IV', 'V', default: 'I'\n";
 
     auto rotor = ROTORS.at(this->wiringInput());
 

@@ -8,10 +8,10 @@ Reflector::Reflector() {
 }
 
 Reflector::Reflector(char ringPosition) {
-    std::cout << std::endl;
+    std::cout << "\n";
 
-    std::cout << "What reflector should be used?" << std::endl;
-    std::cout << "Reflector list: 'A', 'B', 'C', 'Beta', 'Gamma', default: 'A'" << std::endl;
+    std::cout << "What reflector should be used?\n";
+    std::cout << "Reflector list: 'A', 'B', 'C', 'Beta', 'Gamma', default: 'A'\n";
 
     this->componentWiring = REFLECTORS.at(this->wiringInput());
 

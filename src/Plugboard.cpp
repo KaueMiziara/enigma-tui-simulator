@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 
-#include "../include/Constants.h"
 #include "../include/Plugboard.h"
 
 Plugboard::Plugboard() {
