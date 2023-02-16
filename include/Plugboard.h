@@ -1,7 +1,6 @@
 #pragma once
 
 #include <vector>
-#include <string>
 
 #include "EnigmaComponent.h"
 
@@ -11,5 +10,5 @@ public:
     
     void swapLetters(std::vector<std::string> pairs);
 
-    void getSwapped();
+    std::vector<std::string> getPairs();
 };

@@ -67,17 +67,20 @@ Reflector *reflector
 }
 
 void Enigma::printSettings() {
-    std::cout << std::endl;
+    std::cout << "\n";
     std::cout << "Leftmost rotor wiring: " << this->rotorLeft.getWiring()
-              << ", notch: " << this->rotorLeft.getNotch() << std::endl;
+              << ", notch: " << this->rotorLeft.getNotch() << "\n";
 
     std::cout << "Middle rotor wiring: " << this->rotorMiddle.getWiring()
-              << ", notch: " << this->rotorMiddle.getNotch() << std::endl;
+              << ", notch: " << this->rotorMiddle.getNotch() << "\n";
 
     std::cout << "Rightmost rotor wiring: " << this->rotorRight.getWiring()
-              << ", notch: " << this->rotorRight.getNotch() << std::endl;
-    std::cout << std::endl;
+              << ", notch: " << this->rotorRight.getNotch() << "\n";
+    std::cout << "\n";
 
-    std::cout << "Reflector wiring: " << this->reflector.getWiring() << std::endl;
+    std::cout << "Reflector wiring: " << this->reflector.getWiring() << "\n";
+    std::cout << "\n";
+
+    std::cout << "Plugboard settings: " << this->plugboard.getWiring() << "\n";
     std::cout << std::endl;
 }
