@@ -24,7 +24,7 @@ void Plugboard::swapLetters(std::vector<std::string> pairs) {
 }
 
 std::vector<std::string> Plugboard::getPairs() {
-    const std::string file{"PlugboardFile.txt"};
+    const std::string file{"PlugboardSettings.txt"};
     std::ifstream fileStream{file};
 
     std::vector<std::string> pairs{};
@@ -39,7 +39,7 @@ std::vector<std::string> Plugboard::getPairs() {
             pairs.push_back(tmp);
         }
     } else
-        std::cerr << "\n\t\033[1;31mError:\033[0m Could not open file 'Plugboard.txt'\n";
+        std::cerr << "\t\033[1;31mError:\033[0m Could not open file 'PlugboardSettings.txt\n";
 
     return pairs;
 }

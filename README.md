@@ -23,19 +23,19 @@ A board in the machine's front side, containing a socket for each alphabet lette
 Ten pair of letter are chosen to be plugged, swapping the letter if a signal is received, i.e. if 'A' and 'B' are connected in the plugboard and 'A' is pressed on the keyboard, the output would be 'B'.<br>
 
 ### Rotors and Reflector
-<!-- TODO -->
+> TODO
 
 
 ### Calculating the number of possible initial settings
-<!-- TODO -->
-<!-- 5.4.3 ways to choose rotors -->
-<!-- 5 ways to choose the reflector -->
-<!-- 26^4 ways to choose the letters initial positions -->
-<!-- 26!/(6!.10!.2^10) ways to choose the plugboard settings -->
+> TODO
+> 5.4.3 ways to choose rotors -->
+> 5 ways to choose the reflector
+> 26^4 ways to choose the letters initial positions
+> 26!/(6!.10!.2^10) ways to choose the plugboard settings
 
 
 ## About this application
-<!-- TODO -->
+> TODO
 
 
 ### Building the executable from source
@@ -57,8 +57,16 @@ cmake --build build
 ```
 The executable will be inside the 'build' folder.<br>
 
+### Changing the plugboard settings
+To choose the letter pairs connected in the plugboard, edit the file 'PlugboardSettings.txt'.<br>
+Each line is expected to have a pair of letters.<br>
+If there are more than two letters in a single line, they will be ignored.<br>
+If a non ASCII-alphabetic character is found, it will be replaced by the letter 'A'.<br>
+If there is a single letter in a line, it will be matched with 'A'.<br>
+
 ### Running and configuring the machine
-<!-- TODO -->
+> TODO
+
 ```bash
 cd build
 ./enigma-cli
@@ -87,6 +95,8 @@ Middle rotor wiring: ..., notch: ...
 Rightmost rotor wiring: ..., notch: ...
 
 Reflector wiring: ...
+
+Plugboard settings: ...
 
 # Machine keyboard input
 Insert a text:
