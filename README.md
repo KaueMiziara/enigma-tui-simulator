@@ -5,7 +5,7 @@ Encrypt messages using the Enigma machine (CLI version)<br>
 
 
 ## About the Enigma Machine
-The Enigma is a machine extensively used by Germany Armed Forces during World War II.<br>
+The Enigma is a machine extensively used by the Nazi Germany Armed Forces during World War II.<br>
 It enciphers messages using an electromechanical mecanism that consists in:<br>
 - 1 keyboard;
 - 1 plugboard, connecting 10 pairs of letters;
@@ -30,7 +30,8 @@ The rotor also has a mechanism that makes its wheels rotate after each time the 
 When multiple rotors are connected side by side in the machine, only the rightmost rotates. Each rotor model has a notch in a different key; the left side rotor will only move when the mechanism that rotates the wheels (a ratchet with pawls) pushes the notch, making both rotors step together.<br>
 
 ### Reflector
-
+Similar to a rotor, but doesn't rotate nor has anything connected to its left.<br>
+The reflector receives the electrical signal from the last rotor, passes to its other face and, instead of sending to a next component, it passes it back to its first face, sending to the last rotor again.<br>
 
 ### Calculating the number of possible initial settings
 > TODO
@@ -47,7 +48,7 @@ It can be easily built using CMake:<br>
 
 First, clone the source code (or download the .zip file):<br>
 ```bash
-git clone https://github.com/KaueMiziara/kciphers-with-cxxqt.git
+git clone https://github.com/KaueMiziara/k-enigma-cli.git
 ```
 Then, open the directory in the terminal and use cmake to build the executable:<br>
 ```bash
@@ -63,16 +64,16 @@ The executable will be inside the 'build' folder.<br>
 
 ### Changing the plugboard settings
 To choose the letter pairs connected in the plugboard, edit the file 'PlugboardSettings.txt'.<br>
-Each line is expected to have a pair of letters.<br>
-If there are more than two letters in a single line, they will be ignored.<br>
-If a non ASCII-alphabetic character is found, it will be replaced by the letter 'A'.<br>
-If there is a single letter in a line, it will be matched with 'A'.<br>
+- Each line is expected to have a pair of letters.<br>
+- If there are more than two letters in a single line, they will be ignored.<br>
+- If a non ASCII-alphabetic character is found, it will be replaced by the letter 'A'.<br>
+- If there is a single letter in a line, it will be matched with 'A'.<br>
 
 ### Running and configuring the machine
-> TODO
+Just run the executable file from the terminal:
 
 ```bash
-cd build
+cd /path/to/folder/build
 ./enigma-cli
 
 # Choose the rotors
