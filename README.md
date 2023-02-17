@@ -6,13 +6,13 @@ Encrypt messages using the Enigma machine (CLI version)<br>
 
 ## About the Enigma Machine
 The Enigma is a machine extensively used by the Nazi Germany Armed Forces during World War II.<br>
-It enciphers messages using an electromechanical mecanism that consists in:<br>
+It enciphers messages using an electromechanical mecanism that consists in:
 - 1 keyboard;
 - 1 plugboard, connecting 10 pairs of letters;
 - 3 rotors;
 - 1 reflector;
 - 26 lights that shows the enciphered letter.
-<br>
+
 
 ### Keyboard
 Similar to a typing machine keyboard.<br>
@@ -27,11 +27,21 @@ The rotors are wheels with two faces, one containing, for each letter in the alp
 Each pin and plate represent a letter; the input letter is scrambled by connecting the pin that represents it to a plate that represents another letter.
 There are a few different types of rotors, each wiring the faces in different ways.<br>
 The rotor also has a mechanism that makes its wheels rotate after each time the keyboard is press, reconnecting the faces in a different setting, so if the same letter is pressed multiple times, the enciphered message will have different letters, making the code harder to crack.<br>
-When multiple rotors are connected side by side in the machine, only the rightmost rotates. Each rotor model has a notch in a different key; the left side rotor will only move when the mechanism that rotates the wheels (a ratchet with pawls) pushes the notch, making both rotors step together.<br>
+Regular Enigma machines have 3 rotors connected side by side, but only the rightmost rotates.<br>
+Each rotor model has a notch in a different key; the left side rotor will only move when the mechanism that rotates the wheels (a ratchet with pawls) pushes the notch, making both rotors step together.<br>
 
 ### Reflector
 Similar to a rotor, but doesn't rotate nor has anything connected to its left.<br>
 The reflector receives the electrical signal from the last rotor, passes to its other face and, instead of sending to a next component, it passes it back to its first face, sending to the last rotor again.<br>
+
+### Electrical signal path
+After pressing any keyboard key, the rotor steps, then:
+- The signal goes to the plugboard, which might scramble the letter once, then sends it to the rightmost rotor;
+- The signal goes through its wiring, scrambling the letter when it reaches the rotors other face. Then, it is passed to the middle rotor;
+- The last step repeats, then again in the left rotor, where the signal is passed to the reflector;
+- There, the letter is scramble again and the signal is passed back to the rotors, repeating the process;
+- After passing backwards through the right rotor, the signal is sent back to the plugboard, where the letter might be swapped once more;
+- Finally, the plugboard send the letter to the lights, showing the user the enciphered letter.
 
 ### Calculating the number of possible initial settings
 > TODO
