@@ -22,8 +22,14 @@ After pressing a key, an electrical signal is passed to the plugboard, where the
 A board in the machine's front side, containing a socket for each alphabet letter, wired to the respective keyboard key.<br>
 Ten pair of letter are chosen to be plugged, swapping the letter if a signal is received, i.e. if 'A' and 'B' are connected in the plugboard and 'A' is pressed on the keyboard, the output would be 'B'.<br>
 
-### Rotors and Reflector
-> TODO
+### Rotors
+The rotors are wheels with two faces, one containing, for each letter in the alphabet, contact pins to pass an electrical signal and the other containing metallic plates to receive this signal.<br>
+Each pin and plate represent a letter; the input letter is scrambled by connecting the pin that represents it to a plate that represents another letter.
+There are a few different types of rotors, each wiring the faces in different ways.<br>
+The rotor also has a mechanism that makes its wheels rotate after each time the keyboard is press, reconnecting the faces in a different setting, so if the same letter is pressed multiple times, the enciphered message will have different letters, making the code harder to crack.<br>
+When multiple rotors are connected side by side in the machine, only the rightmost rotates. Each rotor model has a notch in a different key; the left side rotor will only move when the mechanism that rotates the wheels (a ratchet with pawls) pushes the notch, making both rotors step together.<br>
+
+### Reflector
 
 
 ### Calculating the number of possible initial settings
@@ -35,8 +41,6 @@ Ten pair of letter are chosen to be plugged, swapping the letter if a signal is 
 
 
 ## About this application
-> TODO
-
 
 ### Building the executable from source
 It can be easily built using CMake:<br>
