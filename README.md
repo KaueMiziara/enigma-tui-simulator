@@ -46,24 +46,24 @@ To calculate the number of possible settings, it's necessary to know how many wa
 
 First, the rotors:
 - Choose three out of five, without repetition: $\frac{5!}{(5 - 3)!} = 60$ possibilities
-- Choose each rotor's initial position relative to its wiring: $26^{3}$ = 17,576 possibilities
-- Total rotors settings: 1,054,380
+- Choose each rotor's initial position relative to its wiring: $26^{3} = 17,576$ possibilities
+- Total rotors settings: 1,054,560
 
 Then, the plugboard:
-- Choose the order to plug all of the letters: 26! possibilities
-- Choose the six letters that won't be connected: 6! possibilities
-- Choose how the 10 wires are going to connect the 20 plugs: 10! possibilities
-- Disconsider the order each extremity of the same wire is connected (as they are equivalent), for all ten wires: $2^{10}$ = 1024
+- Choose the order to plug all of the letters: $26!$ possibilities
+- Choose the six letters that won't be connected: $6!$ possibilities
+- Choose how the 10 wires are going to connect the 20 plugs: $10!$ possibilities
+- Disconsider the order each extremity of the same wire is connected (as they are equivalent), for all ten wires: $2^{10} = 1024$
 - Total plugboard settings: $\frac{26!}{6! * 10! * 1024} = 150,738,274,937,250$
 
 Multiplying each result gives the total possible arrengements:<br>
-1,054,380 * 150,738,274,937,250 = 158,962,555,217,826,360,000
+$1,054,560 * 150,738,274,937,250 = 158,962,555,217,826,360,000$
 
 In this application, however, the user can also choose a reflector from a list (its initial position is fixed):
 - Choose one reflector out of five: 5 possibilities
 
 Multiplying this by the former total:<br>
-158,962,555,217,826,360,000 * 5 = 794,812,776,089,131,800,000 possible arrangements
+$158,962,555,217,826,360,000 * 5 = 794,812,776,089,131,800,000$ possible arrangements
 
 
 ## About this application
