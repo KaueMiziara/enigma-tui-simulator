@@ -98,35 +98,35 @@ To choose the letter pairs connected in the plugboard, edit the file 'PlugboardS
 Just run the executable file from the terminal:
 
 ```bash
-cd /path/to/folder/build
-./enigma-cli
+$ cd /path/to/project/folder/
+$ ./build/enigma-cli
 
 # Choose the rotors and the respective initial position
 (1/3) What rotor should be used?
 Rotor list: 'I', 'II', 'III', 'IV', 'V', default: 'I'
-user > input left rotor
+$ (input left rotor)
 (1/3) What should be the rotor initial position?
 Default: 'A'
-user > input a letter
+$ (input a letter)
 
 (2/3) What rotor should be used?
 Rotor list: 'I', 'II', 'III', 'IV', 'V', default: 'I'
-user > input middle rotor
+$ (input middle rotor)
 (2/3) What should be the rotor initial position?
 Default: 'A'
-user > input a letter
+$ (input a letter)
 
 (3/3) What rotor should be used?
 Rotor list: 'I', 'II', 'III', 'IV', 'V', default: 'I'
-user > input right rotor
+$ (input right rotor)
 (3/3) What should be the rotor initial position?
 Default: 'A'
-user > input a letter
+$ (input a letter)
 
 # Choose the reflector
 What reflector should be used?
 Reflector list: 'A', 'B', 'C', 'Beta', 'Gamma', default: 'A'
-user > input reflector
+$ (input reflector)
 
 # Prints the wiring for the chosen rotors and reflector
 Leftmost rotor wiring: ..., notch: ...
@@ -139,7 +139,7 @@ Plugboard settings: ...
 
 # Machine keyboard input
 Insert a text:
-user > input text to be enciphered
+$ (input text to be enciphered)
 ```
 
 ### Rotor and Reflector wirings
