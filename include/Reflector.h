@@ -6,10 +6,8 @@ class Reflector : public EnigmaComponent {
 private:
     std::string wiringInput();
 
-    void setRing(char ringPosition);
-
 public:
     Reflector();
     
-    Reflector(char ringPosition);
+    Reflector(char position);
 };

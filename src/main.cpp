@@ -6,9 +6,9 @@ int main(int argc, char **argv) {
     Keyboard keyboard;
     Plugboard plugboard;
 
-    Rotor rotorLeft =   Rotor('A', 1);
-    Rotor rotorMiddle = Rotor('A', 2);
-    Rotor rotorRight =  Rotor('A', 3);
+    Rotor rotorLeft =   Rotor(1);
+    Rotor rotorMiddle = Rotor(2);
+    Rotor rotorRight =  Rotor(3);
 
     Reflector reflector = Reflector('A');
 

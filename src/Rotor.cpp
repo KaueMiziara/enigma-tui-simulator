@@ -6,9 +6,10 @@
 Rotor::Rotor() {
     this->componentWiring = ALPHABET;
     this->rotorNotch = 'A';
+    this->ringPosition = 'A';
 }
 
-Rotor::Rotor(char ringPosition, int n) {
+Rotor::Rotor(int n) {
     std::cout << "(" << n << "/3) What rotor should be used?\n";
     std::cout << "Rotor list: 'I', 'II', 'III', 'IV', 'V', default: 'I'\n";
 
@@ -16,10 +17,21 @@ Rotor::Rotor(char ringPosition, int n) {
 
     this->componentWiring = rotor.wiring;
     this->rotorNotch = rotor.notch;
-    this->setRing(ringPosition);
+
+    std::cout << "(" << n << "/3) What should be the rotor initial position?\n";
+    std::cout << "Default: 'A'\n";
+
+    this->setRing();
 }
 
-void Rotor::setRing(char ringPosition) {
+void Rotor::setRing() {
+    char position;
+    std::cin >> position;
+    std::cin.ignore();
+    
+    if (isalpha(position)) this->ringPosition = toupper(position);
+    else this->ringPosition = 'A';
+
     while (this->componentAlphabet[0] != ringPosition) {
         this->rotate();
     }

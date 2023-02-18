@@ -6,14 +6,16 @@ class Rotor : public EnigmaComponent {
 private:
     char rotorNotch;
 
-    void setRing(char firstLetter);
+    char ringPosition;
+
+    void setRing();
 
     std::string wiringInput();
 
 public:
     Rotor();
     
-    Rotor(char ringPosition, int n);
+    Rotor(int n);
 
     char getNotch();
 

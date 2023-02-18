@@ -47,6 +47,9 @@ After pressing any keyboard key, the rotor steps, then:
 This application is based on the German Army and Air Force version of Enigma, which has a set of five rotors to be chosen, one reflector and connects ten pairs of letters in the plugboard.<br>
 To calculate the number of possible settings, it's necessary to know how many ways are there to arrange each of the components.<br>
 
+  <!-- TODO -->
+<!-- Formulas -->
+
 First, the rotors:
 - Choose three out of five, without repetition: 5! / (5 - 3)! = 60 possibilities
 - Choose each rotor's initial position relative to its wiring: 26^3 = 17,576 possibilities
