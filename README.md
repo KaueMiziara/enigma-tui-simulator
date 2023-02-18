@@ -1,9 +1,6 @@
 # Enigma Simulator (CLI)
 Encrypt messages using the Enigma machine (CLI version)<br>
 
-> Both the code and this README section are currently WIP
-
-
 ## About the Enigma Machine
 The Enigma is a machine extensively used by the Nazi Germany Armed Forces during World War II.<br>
 It enciphers messages using an electromechanical mecanism that consists in:
@@ -65,13 +62,11 @@ Then, the plugboard:
 Multiplying each result gives the total possible arrengements:<br>
 1,054,380 * 150,738,274,937,250 = 158,962,555,217,826,360,000
 
-In this application, however, the user can also choose a reflector and change its initial position:
+In this application, however, the user can also choose a reflector from a list (its initial position is fixed):
 - Choose one reflector out of five: 5 possibilities
-- Choose the reflector's initial position relative to its wiring: 26
-- Total reflector settings: 5 * 26 = 130
 
 Multiplying this by the former total:<br>
-158,962,555,217,826,360,000 * 130 = 20,665,132,178,317,426,800,000 possible arrangements
+158,962,555,217,826,360,000 * 5 = 794,812,776,089,131,800,000 possible arrangements
 
 
 ## About this application
@@ -109,18 +104,27 @@ Just run the executable file from the terminal:
 cd /path/to/folder/build
 ./enigma-cli
 
-# Choose the rotors
+# Choose the rotors and the respective initial position
 (1/3) What rotor should be used?
 Rotor list: 'I', 'II', 'III', 'IV', 'V', default: 'I'
 user > input left rotor
+(1/3) What should be the rotor initial position?
+Default: 'A'
+user > input a letter
 
 (2/3) What rotor should be used?
 Rotor list: 'I', 'II', 'III', 'IV', 'V', default: 'I'
 user > input middle rotor
+(2/3) What should be the rotor initial position?
+Default: 'A'
+user > input a letter
 
 (3/3) What rotor should be used?
 Rotor list: 'I', 'II', 'III', 'IV', 'V', default: 'I'
 user > input right rotor
+(3/3) What should be the rotor initial position?
+Default: 'A'
+user > input a letter
 
 # Choose the reflector
 What reflector should be used?
