@@ -45,7 +45,7 @@ This application is based on the German Army and Air Force version of Enigma, wh
 To calculate the number of possible settings, it's necessary to know how many ways are there to arrange each of the components.<br>
 
 First, the rotors:
-- Choose three out of five, without repetition: $$\frac{5!}{(5 - 3)!}$$ = 60 possibilities
+- Choose three out of five, without repetition: $\frac{5!}{(5 - 3)!} = 60$ possibilities
 - Choose each rotor's initial position relative to its wiring: $26^{3}$ = 17,576 possibilities
 - Total rotors settings: 1,054,380
 
@@ -54,7 +54,7 @@ Then, the plugboard:
 - Choose the six letters that won't be connected: 6! possibilities
 - Choose how the 10 wires are going to connect the 20 plugs: 10! possibilities
 - Disconsider the order each extremity of the same wire is connected (as they are equivalent), for all ten wires: $2^{10}$ = 1024
-- Total plugboard settings: $$\frac{26!}{6! * 10! * 1024}$$ = 150,738,274,937,250
+- Total plugboard settings: $\frac{26!}{6! * 10! * 1024} = 150,738,274,937,250$
 
 Multiplying each result gives the total possible arrengements:<br>
 1,054,380 * 150,738,274,937,250 = 158,962,555,217,826,360,000
