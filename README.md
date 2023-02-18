@@ -45,7 +45,7 @@ This application is based on the German Army and Air Force version of Enigma, wh
 To calculate the number of possible settings, it's necessary to know how many ways are there to arrange each of the components.<br>
 
 First, the rotors:
-- Choose three out of five, without repetition: $\frac{5!}{(5 - 3)!} = 60$ possibilities
+- Choose three out of five, without repetition: $5! = 60$ possibilities
 - Choose each rotor's initial position relative to its wiring: $26^{3} = 17,576$ possibilities
 - Total rotors settings: 1,054,560
 
@@ -141,3 +141,21 @@ Plugboard settings: ...
 Insert a text:
 user > input text to be enciphered
 ```
+
+### Rotor and Reflector wirings
+Rotor and reflector models differentiate from each other by their wiring.<br>
+Below, a list of the availabe models, the respective wiring and where is the notch (for rotors).
+
+#### Rotors
+- "I":   "EKMFLGDQVZNTOWYHXUSPAIBRCJ", notch: 'Q'
+- "II":  "AJDKSIRUXBLHWTMCQGZNPYFVOE", notch: 'E'
+- "III": "BDFHJLCPRTXVZNYEIWGAKMUSQO", notch: 'V'
+- "IV":  "ESOVPZJAYQUIRHXLNFTGKDCMWB", notch: 'J'
+- "V":   "VZBRGITYUPSDNHLXAWMJQOFECK", notch: 'Z'
+
+#### Reflectors
+- "A": "EJMZALYXVBWFCRQUONTSPIKHGD"
+- "B": "YRUHQSLDPXNGOKMIEBFZCWVJAT"
+- "C": "FVPJIAOYEDRZXWGCTKUQSBNMHL"
+- "$\Beta$":  "LEYJVCNIXWPBQMDRTAKZGFUHOS"
+- "$\Gamma$": "FSOKANUERHMBTIYCWLQPZXVGJD"
