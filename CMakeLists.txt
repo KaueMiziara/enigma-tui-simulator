@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-project(enigma-cli)
+project(enigma-tui)
 
 set(SOURCES
     src/main.cpp
@@ -15,5 +15,5 @@ set(SOURCES
     src/EnigmaComponent.cpp
     src/Enigma.cpp)
 
-add_executable(enigma-cli ${SOURCES})
-target_include_directories(enigma-cli PRIVATE include)
+add_executable(enigma-tui ${SOURCES})
+target_include_directories(enigma-tui PRIVATE include)
