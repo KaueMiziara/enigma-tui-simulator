@@ -1,5 +1,5 @@
-# Enigma Simulator (CLI)
-Encrypt messages using the Enigma machine (CLI version)<br>
+# Enigma Simulator (TUI)
+Encrypt messages using the Enigma machine (TUI version)<br>
 
 ## About the Enigma Machine
 The Enigma is a machine extensively used by the Nazi Germany Armed Forces during World War II.<br>
@@ -73,7 +73,7 @@ It can be easily built using CMake:<br>
 
 First, clone the source code (or download the .zip file):<br>
 ```bash
-git clone https://github.com/KaueMiziara/k-enigma-cli.git
+git clone https://github.com/KaueMiziara/k-enigma-tui.git
 ```
 Then, open the directory in the terminal and use cmake to build the executable:<br>
 ```bash
@@ -99,7 +99,7 @@ Just run the executable file from the terminal:
 
 ```bash
 $ cd /path/to/project/folder/
-$ ./build/enigma-cli
+$ ./build/enigma-tui
 
 # Choose the rotors and the respective initial position
 (1/3) What rotor should be used?
