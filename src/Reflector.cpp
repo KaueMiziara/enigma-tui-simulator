@@ -3,11 +3,13 @@
 #include "../include/Constants.h"
 #include "../include/Reflector.h"
 
-Reflector::Reflector() {
+Reflector::Reflector()
+{
     this->componentWiring = ALPHABET;
 }
 
-Reflector::Reflector(char position) {
+Reflector::Reflector(char position)
+{
     std::cout << "\n";
 
     std::cout << "What reflector should be used?\n";
@@ -16,7 +18,8 @@ Reflector::Reflector(char position) {
     this->componentWiring = REFLECTORS.at(this->wiringInput());
 }
 
-std::string Reflector::wiringInput() {
+std::string Reflector::wiringInput()
+{
     std::string reflector;
     std::cin >> reflector;
 

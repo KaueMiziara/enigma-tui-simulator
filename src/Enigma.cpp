@@ -2,7 +2,8 @@
 
 #include "../include/Enigma.h"
 
-char Enigma::encipherLetter(char letter) {
+char Enigma::encipherLetter(char letter)
+{
     letter = keyboard.passForward(letter, &plugboard);
     letter = plugboard.passForward(letter, &rotorRight);
 
@@ -24,13 +25,16 @@ char Enigma::encipherLetter(char letter) {
     return letter;
 }
 
-std::string Enigma::encipherText() {
+std::string Enigma::encipherText()
+{
     std::string text = "";
 
     text += keyboard.takeInput();
 
-    for (char &letter : text) {
-        if (isalpha(letter)) {
+    for (char &letter : text)
+    {
+        if (isalpha(letter))
+        {
             this->rotateRotors();
             
             letter = encipherLetter(letter);
@@ -40,7 +44,8 @@ std::string Enigma::encipherText() {
     return text;
 }
 
-void Enigma::rotateRotors() {
+void Enigma::rotateRotors()
+{
     if (rotorMiddle.getAlphabet()[0] == rotorMiddle.getNotch())
         rotorLeft.rotate();
 
@@ -66,7 +71,8 @@ Reflector *reflector
     this->reflector = *reflector;
 }
 
-void Enigma::printSettings() {
+void Enigma::printSettings()
+{
     std::cout << "\n";
     std::cout << "Leftmost rotor wiring: " << this->rotorLeft.getWiring()
               << ", notch: " << this->rotorLeft.getNotch() << "\n";

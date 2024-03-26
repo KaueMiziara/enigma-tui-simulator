@@ -3,13 +3,15 @@
 #include "../include/Constants.h"
 #include "../include/Rotor.h"
 
-Rotor::Rotor() {
+Rotor::Rotor()
+{
     this->componentWiring = ALPHABET;
     this->rotorNotch = 'A';
     this->ringPosition = 'A';
 }
 
-Rotor::Rotor(int n) {
+Rotor::Rotor(int n)
+{
     std::cout << "(" << n << "/3) What rotor should be used?\n";
     std::cout << "Rotor list: 'I', 'II', 'III', 'IV', 'V', default: 'I'\n";
 
@@ -24,7 +26,8 @@ Rotor::Rotor(int n) {
     this->setRing();
 }
 
-void Rotor::setRing() {
+void Rotor::setRing()
+{
     char position;
     std::cin >> position;
     std::cin.ignore();
@@ -32,9 +35,8 @@ void Rotor::setRing() {
     if (isalpha(position)) this->ringPosition = toupper(position);
     else this->ringPosition = 'A';
 
-    while (this->componentAlphabet[0] != ringPosition) {
+    while (this->componentAlphabet[0] != ringPosition)
         this->rotate();
-    }
 }
 
 void Rotor::rotate() {
@@ -45,11 +47,13 @@ void Rotor::rotate() {
                               componentAlphabet.substr(0, 1);
 }
 
-char Rotor::getNotch() {
+char Rotor::getNotch()
+{
     return this->rotorNotch;
 }
 
-std::string Rotor::wiringInput() {
+std::string Rotor::wiringInput()
+{
     std::string rotor;
     std::cin >> rotor;
 

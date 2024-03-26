@@ -3,7 +3,8 @@
 #include <string>
 #include <unordered_map>
 
-struct RotorWiring {
+struct RotorWiring
+{
     std::string wiring;
     char notch;
 };

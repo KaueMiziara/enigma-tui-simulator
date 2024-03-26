@@ -1,6 +1,7 @@
 #include "../include/EnigmaComponent.h"
 
-char EnigmaComponent::passForward(char letter, EnigmaComponent *nextComponent) {
+char EnigmaComponent::passForward(char letter, EnigmaComponent *nextComponent)
+{
     size_t index = this->componentWiring.find(letter, 0);
 
     index = this->componentAlphabet.find(this->componentWiring[index]);
@@ -9,7 +10,8 @@ char EnigmaComponent::passForward(char letter, EnigmaComponent *nextComponent) {
     return letter;
 }
 
-char EnigmaComponent::passBackward(char letter, EnigmaComponent *nextComponent) {
+char EnigmaComponent::passBackward(char letter, EnigmaComponent *nextComponent)
+{
     size_t index = this->componentWiring.find(letter, 0);
 
     letter = nextComponent->componentAlphabet[index];
@@ -20,10 +22,12 @@ char EnigmaComponent::passBackward(char letter, EnigmaComponent *nextComponent) 
     return letter;
 }
 
-std::string EnigmaComponent::getWiring() {
+std::string EnigmaComponent::getWiring()
+{
     return this->componentWiring;
 }
 
-std::string EnigmaComponent::getAlphabet() {
+std::string EnigmaComponent::getAlphabet()
+{
     return this->componentAlphabet;
 }

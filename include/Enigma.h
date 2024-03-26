@@ -5,7 +5,8 @@
 #include "../include/Rotor.h"
 #include "../include/Reflector.h"
 
-class Enigma {
+class Enigma
+{
 private:
     Keyboard keyboard;
     Plugboard plugboard;
@@ -27,7 +28,7 @@ public:
         Rotor *rotorMiddle,
         Rotor *rotorRight,
         Reflector *reflector
-        );
+    );
 
     std::string encipherText();
     

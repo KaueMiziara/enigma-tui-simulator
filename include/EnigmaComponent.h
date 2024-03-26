@@ -2,7 +2,8 @@
 
 #include "../include/Constants.h"
 
-class EnigmaComponent {
+class EnigmaComponent
+{
 protected:
     std::string componentWiring;
     std::string componentAlphabet = ALPHABET;

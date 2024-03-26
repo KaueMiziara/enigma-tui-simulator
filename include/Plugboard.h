@@ -4,7 +4,8 @@
 
 #include "EnigmaComponent.h"
 
-class Plugboard : public EnigmaComponent {
+class Plugboard : public EnigmaComponent
+{
 public:
     Plugboard();
     

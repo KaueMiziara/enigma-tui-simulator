@@ -2,7 +2,8 @@
 
 #include "EnigmaComponent.h"
 
-class Rotor : public EnigmaComponent {
+class Rotor : public EnigmaComponent
+{
 private:
     char rotorNotch;
 

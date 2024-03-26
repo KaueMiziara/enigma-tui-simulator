@@ -2,7 +2,8 @@
 
 #include "EnigmaComponent.h"
 
-class Keyboard : public EnigmaComponent {
+class Keyboard : public EnigmaComponent
+{
 public:
     Keyboard();
 
