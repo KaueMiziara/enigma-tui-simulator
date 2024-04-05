@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../include/Enigma.h"
+#include "../include/Enigma.hpp"
 
 int main(int argc, char** argv)
 {

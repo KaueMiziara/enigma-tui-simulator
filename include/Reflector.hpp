@@ -1,6 +1,6 @@
 #pragma once
 
-#include "EnigmaComponent.h"
+#include "EnigmaComponent.hpp"
 
 class Reflector : public EnigmaComponent
 {

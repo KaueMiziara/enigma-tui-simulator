@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "../include/Enigma.h"
+#include "../include/Enigma.hpp"
 
 char Enigma::encipherLetter(char letter)
 {

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "../include/Keyboard.h"
-#include "../include/Plugboard.h"
-#include "../include/Rotor.h"
-#include "../include/Reflector.h"
+#include "../include/Keyboard.hpp"
+#include "../include/Plugboard.hpp"
+#include "../include/Rotor.hpp"
+#include "../include/Reflector.hpp"
 
 class Enigma
 {

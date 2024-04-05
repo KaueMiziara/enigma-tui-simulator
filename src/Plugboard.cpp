@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "../include/Plugboard.h"
+#include "../include/Plugboard.hpp"
 
 Plugboard::Plugboard()
 {

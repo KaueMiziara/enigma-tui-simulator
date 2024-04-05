@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "EnigmaComponent.h"
+#include "EnigmaComponent.hpp"
 
 class Plugboard : public EnigmaComponent
 {

@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "../include/Constants.h"
-#include "../include/Reflector.h"
+#include "../include/Constants.hpp"
+#include "../include/Reflector.hpp"
 
 Reflector::Reflector()
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../include/Constants.h"
+#include "../include/Constants.hpp"
 
 class EnigmaComponent
 {

@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "../include/Constants.h"
-#include "../include/Keyboard.h"
+#include "../include/Constants.hpp"
+#include "../include/Keyboard.hpp"
 
 Keyboard::Keyboard()
 {

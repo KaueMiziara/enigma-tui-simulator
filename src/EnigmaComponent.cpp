@@ -1,4 +1,4 @@
-#include "../include/EnigmaComponent.h"
+#include "../include/EnigmaComponent.hpp"
 
 char EnigmaComponent::passForward(char letter, EnigmaComponent *nextComponent)
 {

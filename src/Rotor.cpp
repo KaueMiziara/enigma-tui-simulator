@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "../include/Constants.h"
-#include "../include/Rotor.h"
+#include "../include/Constants.hpp"
+#include "../include/Rotor.hpp"
 
 Rotor::Rotor()
 {
