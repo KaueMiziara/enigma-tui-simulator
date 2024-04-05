@@ -55,11 +55,13 @@ void Enigma::rotateRotors()
     rotorRight.rotate();
 }
 
-Enigma::Enigma(Keyboard *keyboard, Plugboard *plugboard,
-Rotor *rotorLeft,
-Rotor *rotorMiddle,
-Rotor *rotorRight,
-Reflector *reflector
+Enigma::Enigma(
+    Keyboard *keyboard,
+    Plugboard *plugboard,
+    Rotor *rotorLeft,
+    Rotor *rotorMiddle,
+    Rotor *rotorRight,
+    Reflector *reflector
 ) {
     this->keyboard = *keyboard;
     this->plugboard = *plugboard;
