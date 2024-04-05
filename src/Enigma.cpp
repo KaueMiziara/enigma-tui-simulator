@@ -31,7 +31,7 @@ std::string Enigma::encipherText()
 
     text += keyboard.takeInput();
 
-    for (char &letter : text)
+    for (char& letter : text)
     {
         if (isalpha(letter))
         {
@@ -56,12 +56,12 @@ void Enigma::rotateRotors()
 }
 
 Enigma::Enigma(
-    Keyboard *keyboard,
-    Plugboard *plugboard,
-    Rotor *rotorLeft,
-    Rotor *rotorMiddle,
-    Rotor *rotorRight,
-    Reflector *reflector
+    Keyboard* keyboard,
+    Plugboard* plugboard,
+    Rotor* rotorLeft,
+    Rotor* rotorMiddle,
+    Rotor* rotorRight,
+    Reflector* reflector
 ) {
     this->keyboard = *keyboard;
     this->plugboard = *plugboard;

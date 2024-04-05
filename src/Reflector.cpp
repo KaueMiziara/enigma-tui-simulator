@@ -25,7 +25,7 @@ std::string Reflector::wiringInput()
 
     std::cin.ignore();
 
-    for (char &c : reflector) {c = toupper(c);}
+    for (char& c : reflector) {c = toupper(c);}
 
     if (REFLECTORS.find(reflector) != REFLECTORS.end()) return reflector;
     else return "A";

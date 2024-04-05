@@ -23,11 +23,11 @@ private:
 
 public:
     Enigma(
-        Keyboard *keyboard, Plugboard *plugboard,
-        Rotor *rotorLeft,
-        Rotor *rotorMiddle,
-        Rotor *rotorRight,
-        Reflector *reflector
+        Keyboard* keyboard, Plugboard *plugboard,
+        Rotor* rotorLeft,
+        Rotor* rotorMiddle,
+        Rotor* rotorRight,
+        Reflector* reflector
     );
 
     std::string encipherText();

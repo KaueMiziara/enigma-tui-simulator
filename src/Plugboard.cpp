@@ -37,7 +37,7 @@ std::vector<std::string> Plugboard::getPairs()
         std::string tmp{};
         while (fileStream >> tmp)
         {
-            for (char &letter : tmp)
+            for (char& letter : tmp)
             {
                 if (isalpha(letter)) letter = toupper(letter);
                 else letter = 'A';

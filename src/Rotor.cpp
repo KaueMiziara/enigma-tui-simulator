@@ -59,7 +59,7 @@ std::string Rotor::wiringInput()
 
     std::cin.ignore();
 
-    for (char &c : rotor) {c = toupper(c);}
+    for (char& c : rotor) {c = toupper(c);}
 
     if (ROTORS.find(rotor) != ROTORS.end()) return rotor;
     else return "I";
