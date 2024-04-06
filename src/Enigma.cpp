@@ -56,21 +56,21 @@ void Enigma::rotateRotors()
 }
 
 Enigma::Enigma(
-    Keyboard* keyboard,
-    Plugboard* plugboard,
-    Rotor* rotorLeft,
-    Rotor* rotorMiddle,
-    Rotor* rotorRight,
-    Reflector* reflector
+    const Keyboard& keyboard,
+    const Plugboard& plugboard,
+    const Rotor& rotorLeft,
+    const Rotor& rotorMiddle,
+    const Rotor& rotorRight,
+    const Reflector& reflector
 ) {
-    this->keyboard = *keyboard;
-    this->plugboard = *plugboard;
+    this->keyboard  = keyboard;
+    this->plugboard = plugboard;
 
-    this->rotorLeft = *rotorLeft;
-    this->rotorMiddle = *rotorMiddle;
-    this->rotorRight = *rotorRight;
+    this->rotorLeft   = rotorLeft;
+    this->rotorMiddle = rotorMiddle;
+    this->rotorRight  = rotorRight;
 
-    this->reflector = *reflector;
+    this->reflector = reflector;
 }
 
 void Enigma::printSettings()
